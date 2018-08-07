@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch File With Chrome",
+            "file": "${file}"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Test With Node.js",

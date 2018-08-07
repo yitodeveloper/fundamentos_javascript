@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pruebas de Intervalo</title>
+</head>
+<body>
+    <h1>Compra la mejor ICO de todos los tiempos</h1>
+    <h1 id="countdown">Quedán solo 300</h1>
+    <script>
+        let contador = 50;
+        const componente = document.getElementById("countdown")
+
+        interval = setInterval(()=>{
+            let texto = contador == 1? `Quedan solo ${contador} segundo` : `Quedan solo ${contador} segundos`
+            componente.textContent = texto;
+            contador--;
+            if(contador === 0){
+                clearInterval(interval)
+                componente.textContent = `Termino la venta`;
+            } 
+        },500)
+
+        
+    </script>
+</body>
+</html>
